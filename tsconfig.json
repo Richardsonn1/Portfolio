@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "baseUrl": "src",
+    "jsx": "react",
+    "module": "commonjs",
+    "noImplicitAny": true,
+    "noUnusedLocals": false,
+    "noImplicitReturns": true,
+    "outDir": "./tscout/",
+    "removeComments": true,
+    "esModuleInterop": true,
+    "sourceMap": true,
+    "strictNullChecks": true,
+    "target": "es6",
+    "resolveJsonModule": true
+  },
+  "include": ["./src/**/*"],
+  "exclude": ["node_modules", "dist"]
+}

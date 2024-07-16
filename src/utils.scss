@@ -1,0 +1,42 @@
+@use "sass:math";
+
+/* Pixel to rem */
+@function rem($px) {
+  @return ( math.div($px,($rem-base * 1.1))) + rem;
+}
+
+@mixin small() {
+  @media screen and (max-width: rem($medium)) {
+    @content;
+  }
+}
+
+@mixin medium() {
+  @media screen and (min-width: rem($small)) and (max-width: rem($large)) {
+    @content;
+  }
+}
+
+@mixin medium-product() {
+  @media screen and (min-width: rem($small)) and (max-width: rem($large + $aside-width)) {
+    @content;
+  }
+}
+
+@mixin large() {
+  @media screen and (min-width: rem($large)) {
+    @content;
+  }
+}
+
+@mixin extra-large() {
+  @media screen and (min-width: rem($extra-large)) {
+    @content;
+  }
+}
+
+@mixin lesser-than-large() {
+  @media screen and (max-width: rem($large)) {
+    @content;
+  }
+}
